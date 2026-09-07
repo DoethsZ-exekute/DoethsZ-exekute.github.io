@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.exe // Official Portal</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --neon-cyan: #00f0ff;
+            --neon-magenta: #ff007f;
+            --neon-lava: #ffaa00;
+            --text-main: #f0f0f0;
+            --card-bg: rgba(15, 15, 15, 0.85);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Effet grille cyberpunk en fond */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 0, 127, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            padding: 30px 20px;
+            background: var(--card-bg);
+            border: 1px solid #222;
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: var(--neon-lava);
+            font-size: 0.9rem;
+            margin-bottom: 35px;
+            text-shadow: 0 0 8px rgba(255, 170, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #0d0d0d;
+            color: var(--text-main);
+            border: 1px solid #333;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn span.category {
+            font-size: 0.7rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 3px;
+        }
+
+        .btn span.name {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* Effets de survol néon personnalisés */
+        .btn:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            color: var(--neon-cyan);
+        }
+
+        .btn:hover span.category {
+            color: var(--neon-magenta);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: #555;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>.exe</h1>
+        <div class="subtitle">Cyberpunk // Audio // Visual Universe</div>
+
+        <div class="links-wrapper">
+            <a class="btn" href="https://exekute.bandcamp.com" target="_blank">
+                <span class="category">[ Digital Music Store ]</span>
+                <span class="name">Bandcamp</span>
+            </a>
+
+            <a class="btn" href="https://elasticstage.com/exe" target="_blank">
+                <span class="category">[ Vinyls & Print on Demand ]</span>
+                <span class="name">ElasticStage</span>
+            </a>
+
+            <a class="btn" href="https://exekute.itch.io" target="_blank">
+                <span class="category">[ Softwares & Tools ]</span>
+                <span class="name">Itch.io</span>
+            </a>
+
+            <a class="btn" href="https://exekute.printerval.com" target="_blank">
+                <span class="category">[ Merchandising & Fud ]</span>
+                <span class="name">Printerval</span>
+            </a>
+
+            <a class="btn" href="https://n1m.com/3x3" target="_blank">
+                <span class="category">[ Artist Profile ]</span>
+                <span class="name">N1M</span>
+            </a>
+        </div>
+
+        <footer>SYSTEM ACTIVE // DOETHSZ-EXEKUTE</footer>
+    </div>
+
+</body>
+</html>
