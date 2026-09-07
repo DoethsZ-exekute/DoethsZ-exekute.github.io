@@ -11,7 +11,7 @@
             --neon-magenta: #ff007f;
             --neon-lava: #ffaa00;
             --text-main: #f0f0f0;
-            --card-bg: rgba(15, 15, 15, 0.85);
+            --card-bg: rgba(12, 12, 12, 0.9);
         }
 
         body {
@@ -27,7 +27,7 @@
             position: relative;
         }
 
-        /* Effet grille cyberpunk en fond */
+        /* Grille cyberpunk de fond */
         body::before {
             content: "";
             position: absolute;
@@ -41,19 +41,31 @@
 
         .container {
             text-align: center;
-            max-width: 450px;
+            max-width: 460px;
             width: 90%;
-            padding: 30px 20px;
+            padding: 25px;
             background: var(--card-bg);
             border: 1px solid #222;
-            box-shadow: 0 0 25px rgba(0, 240, 255, 0.1);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+            backdrop-filter: blur(8px);
             border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Fud en entête */
+        .fud-header {
+            width: 100%;
+            max-height: 240px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            margin-bottom: 15px;
         }
 
         h1 {
             font-size: 2.2rem;
-            margin-bottom: 5px;
+            margin: 5px 0;
             color: var(--neon-cyan);
             text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
             letter-spacing: 2px;
@@ -61,17 +73,17 @@
 
         .subtitle {
             color: var(--neon-lava);
-            font-size: 0.9rem;
-            margin-bottom: 35px;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
             text-shadow: 0 0 8px rgba(255, 170, 0, 0.4);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .links-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .btn {
@@ -81,28 +93,25 @@
             background: #0d0d0d;
             color: var(--text-main);
             border: 1px solid #333;
-            padding: 14px 20px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 4px;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .btn span.category {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #777;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .btn span.name {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: bold;
         }
 
-        /* Effets de survol néon personnalisés */
         .btn:hover {
             border-color: var(--neon-cyan);
             box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
@@ -113,10 +122,39 @@
             color: var(--neon-magenta);
         }
 
-        footer {
+        /* Section Signature / Logo .exe */
+        .signature-section {
             margin-top: 30px;
+            border-top: 1px dashed #333;
+            padding-top: 20px;
+        }
+
+        .signature-title {
             font-size: 0.75rem;
-            color: #555;
+            color: #888;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .signature-logo {
+            width: 85%;
+            max-width: 280px;
+            border-radius: 4px;
+            border: 1px solid var(--neon-magenta);
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .signature-logo:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.6);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: #444;
             letter-spacing: 1px;
         }
     </style>
@@ -124,6 +162,9 @@
 <body>
 
     <div class="container">
+        <!-- Fud en vedette dans l'entête -->
+        <img src="fud.jpg" alt="Fud" class="fud-header">
+
         <h1>.exe</h1>
         <div class="subtitle">Cyberpunk // Audio // Visual Universe</div>
 
@@ -152,6 +193,12 @@
                 <span class="category">[ Artist Profile ]</span>
                 <span class="name">N1M</span>
             </a>
+        </div>
+
+        <!-- Signature artistique / Logo .exe -->
+        <div class="signature-section">
+            <div class="signature-title">// Signed Artwork //</div>
+            <img src="logo-exe.jpg" alt=".exe Spiked Logo Signature" class="signature-logo">
         </div>
 
         <footer>SYSTEM ACTIVE // DOETHSZ-EXEKUTE</footer>
