@@ -147,6 +147,14 @@
             transform: translateY(-2px);
         }
 
+        /* Intégration Embed Bandcamp */
+        .bandcamp-embed {
+            width: 100%;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
         footer {
             margin-top: 35px;
             font-size: 0.8rem;
@@ -170,6 +178,11 @@
         </header>
 
         <main class="links">
+            <!-- Widget Suivre sur Bandcamp -->
+            <div class="bandcamp-embed">
+                <iframe scrolling="no" style="border: 0; width: 100%; height: 50px;" src="https://bandcamp.com/band_follow_button_deluxe/2370995357"></iframe>
+            </div>
+
             <a href="https://exekute.bandcamp.com" class="btn-link" target="_blank" rel="noopener">
                 Boutique Musique &bull; Bandcamp
             </a>
