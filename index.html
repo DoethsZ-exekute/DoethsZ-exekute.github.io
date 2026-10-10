@@ -12,7 +12,7 @@
     <meta name="author" content=".exe">
     <link rel="canonical" href="https://doethsz-exekute.github.io/">
 
-    <!-- Open Graph / Réseaux sociaux (Discord, Facebook, etc.) -->
+    <!-- Open Graph / Réseaux sociaux -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://doethsz-exekute.github.io/">
     <meta property="og:title" content=".exe | Portail Officiel & Univers Cyberpunk">
@@ -25,7 +25,7 @@
     <meta name="twitter:description" content="Musique électronique, cyberpunk, widgets Linux eww et créations visuelles Fud.">
     <meta name="twitter:image" content="https://doethsz-exekute.github.io/fud%20en%20contexte%20background%20image.jpg">
 
-    <!-- Schema.org Données Structurées pour le Référencement Avancé (Google) -->
+    <!-- Schema.org Données Structurées -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -88,7 +88,6 @@
             backdrop-filter: blur(4px);
         }
 
-        /* En-tête : Bannière et Logo */
         .banner {
             width: 100%;
             max-height: 180px;
@@ -115,7 +114,6 @@
             margin-bottom: 30px;
         }
 
-        /* Section des Liens */
         .links {
             display: flex;
             flex-direction: column;
@@ -147,12 +145,16 @@
             transform: translateY(-2px);
         }
 
-        /* Intégration Embed Bandcamp */
-        .bandcamp-embed {
-            width: 100%;
-            margin-bottom: 5px;
-            display: flex;
-            justify-content: center;
+        /* Style spécifique mis en valeur pour le bouton Suivre / Bandcamp */
+        .btn-follow {
+            background: linear-gradient(135deg, #191919, #222222);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-follow:hover {
+            background-color: var(--accent-color);
+            color: #000;
         }
 
         footer {
@@ -167,21 +169,17 @@
 
     <div class="container">
         <header>
-            <!-- Bannière principale -->
-            <img src="nouvelle banniere to upload.jpg" alt="Bannière officielle de l'artiste .exe - Univers cyberpunk et électronique" class="banner">
-
-            <!-- Lettrage Logo -->
+            <img src="nouvelle banniere to upload.jpg" alt="Bannière officielle de l'artiste .exe" class="banner">
             <img src="lettrages exe spikes.jpg" alt="Logo lettrage .exe Spikes" class="logo-exe">
-
             <h1 style="display: none;">.exe - Portail Officiel Artiste & Développeur</h1>
             <p class="bio">Musique &bull; Logiciels &bull; Projets Visuels</p>
         </header>
 
         <main class="links">
-            <!-- Widget Suivre sur Bandcamp -->
-            <div class="bandcamp-embed">
-                <iframe scrolling="no" style="border: 0; width: 100%; height: 50px;" src="https://bandcamp.com/band_follow_button_deluxe/2370995357"></iframe>
-            </div>
+            <!-- Bouton de suivi Bandcamp sur mesure et garanti sans bug d'affichage -->
+            <a href="https://bandcamp.com/2370995357/subscribe" class="btn-link btn-follow" target="_blank" rel="noopener">
+                Suivre .exe sur Bandcamp &#9835;
+            </a>
 
             <a href="https://exekute.bandcamp.com" class="btn-link" target="_blank" rel="noopener">
                 Boutique Musique &bull; Bandcamp
