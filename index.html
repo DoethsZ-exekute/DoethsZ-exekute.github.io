@@ -145,45 +145,34 @@
             transform: translateY(-2px);
         }
 
-        /* Ligne combinée pour Bandcamp et son bouton embed côte à côte */
-        .bandcamp-row {
+        /* Section Lecteur Bandcamp */
+        .player-section {
+            margin-top: 35px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
+        }
+
+        .player-title {
+            color: #888;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .player-container {
             width: 100%;
-        }
-
-        .bandcamp-row .btn-link {
-            flex: 1; /* Prend le maximum de place disponible */
-            margin: 0;
-        }
-
-        .bandcamp-embed-box {
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            background-color: #111111;
+            max-width: 350px;
+            border-radius: 8px;
+            overflow: hidden;
             border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 0 8px;
-            height: 52px; /* S'aligne parfaitement avec la hauteur du bouton .btn-link */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
         }
 
-        .bandcamp-embed-box iframe {
+        .player-container iframe {
             display: block;
-            background: transparent;
-        }
-
-        /* Ajustement mobile pour les petits écrans */
-        @media (max-width: 520px) {
-            .bandcamp-row {
-                flex-direction: column;
-            }
-            .bandcamp-embed-box {
-                width: 100%;
-                justify-content: center;
-                height: 45px;
-            }
+            width: 100%;
         }
 
         footer {
@@ -205,15 +194,9 @@
         </header>
 
         <main class="links">
-            <!-- Ligne Bandcamp : Lien boutique + Embed classique côte à côte -->
-            <div class="bandcamp-row">
-                <a href="https://exekute.bandcamp.com" class="btn-link" target="_blank" rel="noopener">
-                    Boutique Musique &bull; Bandcamp
-                </a>
-                <div class="bandcamp-embed-box">
-                    <iframe scrolling="no" style="border: 0; width: 115px; height: 33px;" src="https://bandcamp.com/band_follow_button_classic/2370995357"></iframe>
-                </div>
-            </div>
+            <a href="https://exekute.bandcamp.com" class="btn-link" target="_blank" rel="noopener">
+                Boutique Musique &bull; Bandcamp
+            </a>
 
             <a href="https://exekute.printerval.com" class="btn-link" target="_blank" rel="noopener">
                 Marchandise Fud & Lettrages &bull; Printerval
@@ -231,6 +214,14 @@
                 Discographie Officielle &bull; N1M
             </a>
         </main>
+
+        <!-- Lecteur Audio Bandcamp Intégré -->
+        <section class="player-section">
+            <p class="player-title">&bull; Écoute directe &bull;</p>
+            <div class="player-container">
+                <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=773684164/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="https://exekute.bandcamp.com/album/musique-pour-les-enfants-childrens-and-kids-music">Musique pour les enfants / Childrens and kids music by .exe</a></iframe>
+            </div>
+        </section>
 
         <footer>
             &copy; 2026 .exe — Tous droits réservés
