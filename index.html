@@ -145,16 +145,45 @@
             transform: translateY(-2px);
         }
 
-        /* Style spécifique mis en valeur pour le bouton Suivre / Bandcamp */
-        .btn-follow {
-            background: linear-gradient(135deg, #191919, #222222);
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
+        /* Ligne combinée pour Bandcamp et son bouton embed côte à côte */
+        .bandcamp-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
         }
 
-        .btn-follow:hover {
-            background-color: var(--accent-color);
-            color: #000;
+        .bandcamp-row .btn-link {
+            flex: 1; /* Prend le maximum de place disponible */
+            margin: 0;
+        }
+
+        .bandcamp-embed-box {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            background-color: #111111;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0 8px;
+            height: 52px; /* S'aligne parfaitement avec la hauteur du bouton .btn-link */
+        }
+
+        .bandcamp-embed-box iframe {
+            display: block;
+            background: transparent;
+        }
+
+        /* Ajustement mobile pour les petits écrans */
+        @media (max-width: 520px) {
+            .bandcamp-row {
+                flex-direction: column;
+            }
+            .bandcamp-embed-box {
+                width: 100%;
+                justify-content: center;
+                height: 45px;
+            }
         }
 
         footer {
@@ -176,14 +205,15 @@
         </header>
 
         <main class="links">
-            <!-- Bouton de suivi Bandcamp sur mesure et garanti sans bug d'affichage -->
-            <a href="https://bandcamp.com/2370995357/subscribe" class="btn-link btn-follow" target="_blank" rel="noopener">
-                Suivre .exe sur Bandcamp &#9835;
-            </a>
-
-            <a href="https://exekute.bandcamp.com" class="btn-link" target="_blank" rel="noopener">
-                Boutique Musique &bull; Bandcamp
-            </a>
+            <!-- Ligne Bandcamp : Lien boutique + Embed classique côte à côte -->
+            <div class="bandcamp-row">
+                <a href="https://exekute.bandcamp.com" class="btn-link" target="_blank" rel="noopener">
+                    Boutique Musique &bull; Bandcamp
+                </a>
+                <div class="bandcamp-embed-box">
+                    <iframe scrolling="no" style="border: 0; width: 115px; height: 33px;" src="https://bandcamp.com/band_follow_button_classic/2370995357"></iframe>
+                </div>
+            </div>
 
             <a href="https://exekute.printerval.com" class="btn-link" target="_blank" rel="noopener">
                 Marchandise Fud & Lettrages &bull; Printerval
