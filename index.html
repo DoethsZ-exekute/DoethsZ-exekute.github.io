@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.exe | Portail Officiel</title>
+
+    <!-- SEO Balises Principales -->
+    <title>.exe (Exekute) | Musique Électronique, Cyberpunk & Widgets Linux</title>
+    <meta name="description" content="Portail officiel de .exe (exekute) : découvrez les compositions électroniques, les vinyles pressés à la demande, le merchandising du personnage cyberpunk Fud et les widgets Linux eww.">
+    <meta name="keywords" content=".exe, exekute, musique électronique, cyberpunk, Fud, widgets Linux, eww, Bandcamp, ElasticStage, Itch.io">
+    <meta name="author" content=".exe">
+    <link rel="canonical" href="https://doethsz-exekute.github.io/">
+
+    <!-- Open Graph / Réseaux sociaux (Discord, Facebook, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doethsz-exekute.github.io/">
+    <meta property="og:title" content=".exe | Portail Officiel & Univers Cyberpunk">
+    <meta property="og:description" content="Explorez la musique électronique, les logiciels, les vinyles et l'univers visuel cyberpunk de l'artiste .exe.">
+    <meta property="og:image" content="https://doethsz-exekute.github.io/fud%20en%20contexte%20background%20image.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=".exe | Portail Officiel">
+    <meta name="twitter:description" content="Musique électronique, cyberpunk, widgets Linux eww et créations visuelles Fud.">
+    <meta name="twitter:image" content="https://doethsz-exekute.github.io/fud%20en%20contexte%20background%20image.jpg">
+
+    <!-- Schema.org Données Structurées pour le Référencement Avancé (Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": ".exe",
+      "alternateName": "Exekute",
+      "genre": ["Electronic", "Techno", "Hardcore", "Experimental"],
+      "url": "https://doethsz-exekute.github.io/",
+      "image": "https://doethsz-exekute.github.io/lettrages%20exe%20spikes.jpg",
+      "sameAs": [
+        "https://exekute.bandcamp.com",
+        "https://exekute.itch.io",
+        "https://elasticstage.com/exe",
+        "https://exekute.printerval.com"
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --bg-color: #050505;
@@ -22,7 +61,6 @@
 
         body {
             background-color: var(--bg-color);
-            /* Utilisation de l'image de fond */
             background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('fud en contexte background image.jpg');
             background-size: cover;
             background-position: center;
@@ -119,16 +157,18 @@
 <body>
 
     <div class="container">
-        <!-- Bannière principale -->
-        <img src="nouvelle banniere to upload.jpg" alt="Bannière .exe" class="banner">
+        <header>
+            <!-- Bannière principale -->
+            <img src="nouvelle banniere to upload.jpg" alt="Bannière officielle de l'artiste .exe - Univers cyberpunk et électronique" class="banner">
 
-        <!-- Lettrage Logo -->
-        <img src="lettrages exe spikes.jpg" alt=".exe Spikes Logo" class="logo-exe">
+            <!-- Lettrage Logo -->
+            <img src="lettrages exe spikes.jpg" alt="Logo lettrage .exe Spikes" class="logo-exe">
 
-        <p class="bio">Musique &bull; Logiciels &bull; Projets Visuels</p>
+            <h1 style="display: none;">.exe - Portail Officiel Artiste & Développeur</h1>
+            <p class="bio">Musique &bull; Logiciels &bull; Projets Visuels</p>
+        </header>
 
-        <!-- Ensemble de vos plateformes -->
-        <div class="links">
+        <main class="links">
             <a href="https://exekute.bandcamp.com" class="btn-link" target="_blank" rel="noopener">
                 Boutique Musique &bull; Bandcamp
             </a>
@@ -148,7 +188,7 @@
             <a href="https://n1m.com/3x3" class="btn-link" target="_blank" rel="noopener">
                 Discographie Officielle &bull; N1M
             </a>
-        </div>
+        </main>
 
         <footer>
             &copy; 2026 .exe — Tous droits réservés
