@@ -146,13 +146,13 @@
             transform: translateY(-2px);
         }
 
-        /* Section Radio & Integrations */
+        /* Section Radio / KracRadio Badge */
         .radio-section {
             margin-top: 35px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .radio-badge {
@@ -168,21 +168,6 @@
         .radio-badge:hover {
             transform: scale(1.03);
             filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5));
-        }
-
-        .radio-embed-container {
-            width: 100%;
-            max-width: 480px;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-            background: #000;
-        }
-
-        .radio-embed-container iframe {
-            display: block;
-            width: 100%;
         }
 
         /* Section Lecteur Bandcamp */
@@ -255,15 +240,12 @@
             </a>
         </main>
 
-        <!-- Section Diffusion Radio / KracRadio -->
+        <!-- Section Diffusion Radio / KracRadio (Badge cliquable propre sans erreur iframe) -->
         <section class="radio-section">
             <p class="player-title">&bull; Diffusion Radio &bull;</p>
             <a href="https://kracradio.com/wiki-artistes/exe" target="_blank" rel="noopener" class="radio-badge">
                 <img src="https://kracradio.com/badges/kracradio-fr-dark.svg" alt="Joué sur KracRadio" width="240" height="64">
             </a>
-            <div class="radio-embed-container">
-                <iframe src="https://kracradio.com/embed/kracradio" width="100%" height="180" style="border:0;max-width:480px" allow="autoplay" title="KracRadio"></iframe>
-            </div>
         </section>
 
         <!-- Lecteur Audio Bandcamp Intégré -->
